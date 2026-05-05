@@ -9,6 +9,11 @@ import kia from "./kia.jpg";
 import trafficlight from "./trafficlight.png";
 import Sarfes from "./sarfes.png";
 import herobg from "./herobg.png";
+import appStore from "./app-store.png";
+import playStore from "./play-store.png";
+import asalCertificate from "./certificates/AsalCertificate.png";
+import birzeitBachelorCertificate from "./certificates/BirzetBech.png";
+import efsetEnglishCertificate from "./certificates/EF-SET-Certificate.pdf";
 
 import css from "./tech/css.png";
 import git from "./tech/git.png";
@@ -30,6 +35,11 @@ import asal from "./tech/asal.png";
 
 export {
   herobg,
+  appStore,
+  playStore,
+  asalCertificate,
+  birzeitBachelorCertificate,
+  efsetEnglishCertificate,
   Sarfes,
   trafficlight,
   kia,

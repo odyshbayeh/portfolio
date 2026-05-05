@@ -33,7 +33,7 @@ const Navbar = () => {
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
-      <div className="w-full flex justify-between items-center max-w-6xl mx-auto">
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -45,11 +45,11 @@ const Navbar = () => {
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Ody Shbayeh &nbsp;
-            <span className="sm:block hidden">  SWE | Ai enthusiast</span>
+            <span className="sm:block hidden"> SWE | AI Enthusiast</span>
           </p>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-16">
+        <ul className="list-none hidden sm:flex flex-row gap-7 lg:gap-10 xl:gap-16">
           <button className="button  text-[17px] font-medium cursor-pointer">
             <a
               className="button bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text hover:text-violet-400"

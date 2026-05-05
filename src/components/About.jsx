@@ -1,4 +1,3 @@
-import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
@@ -6,7 +5,7 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
-const ServiceCard = ({ index, title, icon }) => {
+const ServiceCard = ({ index, title, icon, icons }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
@@ -21,7 +20,23 @@ const ServiceCard = ({ index, title, icon }) => {
           }}
           className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
         >
-          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+          {icons ? (
+            <div className="service-store-icons" aria-label={title}>
+              {icons.map((serviceIcon) => (
+                <span
+                  className="service-store-icon"
+                  key={serviceIcon.name}
+                  role="img"
+                  aria-label={serviceIcon.name}
+                  style={{
+                    "--service-icon-url": `url(${serviceIcon.src})`,
+                  }}
+                />
+              ))}
+            </div>
+          ) : (
+            <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+          )}
           <h3 className="text-white text-[20px] font-bold text-center">
             {title}
           </h3>
@@ -51,18 +66,10 @@ const About = () => {
         leverage academic knowledge in a dynamic professional setting..
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-12 sm:mt-20 flex flex-wrap justify-center lg:justify-start gap-6 sm:gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
-
-        <div className="spline-background">
-          <spline-viewer
-            class="robot-3d"
-            url="https://prod.spline.design/URgoojG4g3ItzDOk/scene.splinecode"
-            events="none"
-          ></spline-viewer>
-        </div>
       </div>
     </>
   );

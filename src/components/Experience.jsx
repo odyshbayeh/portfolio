@@ -12,12 +12,37 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
+const ExperienceDate = ({ date, techStack = [] }) => {
+  return (
+    <div className="experience-date">
+      <span className="experience-date-text">{date}</span>
+      <div className="experience-tech-list" aria-label="Technologies used">
+        {techStack.map((tech) => (
+          <span
+            className="experience-tech-ball"
+            key={tech.name}
+            title={tech.name}
+          >
+            <img src={tech.icon} alt={tech.name} />
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{ background: "#1d1836", color: "#fff" }}
       contentArrowStyle={{ borderRight: "7px solid #232631" }}
-      date={experience.date}
+      date={
+        <ExperienceDate
+          date={experience.date}
+          techStack={experience.techStack}
+        />
+      }
+      dateClassName="experience-date-slot"
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div className="flex justify-center items-center w-full h-full">

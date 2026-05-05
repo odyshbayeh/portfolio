@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import OdyImage from "../assets/OdyShbayeh.jpg";
@@ -5,38 +6,84 @@ import { CiLinkedin } from "react-icons/ci";
 import { BsGithub } from "react-icons/bs";
 
 const Hero = () => {
+  const splineViewerRef = useRef(null);
+  const [splineReady, setSplineReady] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    import("@splinetool/viewer").then(() => {
+      if (!cancelled) setSplineReady(true);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!splineReady) return undefined;
+
+    const host = splineViewerRef.current;
+    if (!host) return undefined;
+
+    const hideLogo = () => {
+      const logo = host.shadowRoot?.getElementById("logo");
+      if (!logo) return false;
+      logo.style.display = "none";
+      return true;
+    };
+
+    if (hideLogo()) return undefined;
+
+    let attempts = 0;
+    const intervalId = window.setInterval(() => {
+      attempts += 1;
+      if (hideLogo() || attempts > 160) {
+        window.clearInterval(intervalId);
+      }
+    }, 125);
+
+    return () => window.clearInterval(intervalId);
+  }, [splineReady]);
+
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className="hero-section relative w-full h-screen min-h-[100svh] mx-auto overflow-hidden">
+      <div className="hero-spline" aria-hidden="true">
+        {splineReady ? (
+          <spline-viewer
+            ref={splineViewerRef}
+            className="hero-spline-viewer"
+            url="https://prod.spline.design/URgoojG4g3ItzDOk/scene.splinecode"
+            events="none"
+          ></spline-viewer>
+        ) : null}
+      </div>
+
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`hero-content absolute inset-x-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
         {/* Left vertical line */}
-        <div className="flex flex-col justify-center items-center mt-10">
+        <div className="hero-line flex flex-col justify-center items-center mt-10">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+          <div className="hero-line-stem w-1 violet-gradient" />
         </div>
 
         {/* Right side: Text + Image + Links */}
         <div className="flex flex-col">
           {/* Hero Text */}
           <div>
-            <h1 className={`${styles.heroHeadText} text-white`}>
-              Hi, I'm <span className="text-[#915eff]">Eng-Ody Shbayeh</span>
+            <h1 className={`${styles.heroHeadText} hero-title text-white`}>
+              Hi, I&apos;m{" "}
+              <span className="text-[#915eff]">Eng-Ody Shbayeh</span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+            <p
+              className={`${styles.heroSubText} hero-subtitle mt-2 text-white-100`}
+            >
               I am a Computer Engineer Graduate{" "}
               <br className="sm:block hidden" /> from Birzeit University
             </p>
           </div>
 
-          <div
-            className="mt-6 w-[150px] h-[38px] flex flex-wrap items-center justify-center bg-tertiary gap-8 p-[12px] rounded-xl"
-            style={{
-              pointerEvents: "auto",
-              marginLeft: "200px",
-              boxShadow: "0 0 20px rgba(145,94,255,0.7)",
-            }}
-          >
+          <div className="hero-socials mt-6 w-[150px] h-[38px] flex flex-wrap items-center justify-center bg-tertiary gap-8 p-[12px] rounded-xl">
             <a
               className="scale-[2]"
               href="https://www.linkedin.com/in/ody-shbayeh-080833311/"
@@ -64,6 +111,8 @@ const Hero = () => {
                 src={OdyImage}
                 alt="Ody Shbayeh"
                 className="rounded-full image-inner"
+                fetchpriority="high"
+                decoding="async"
               />
             </div>
           </div>
@@ -71,7 +120,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+      <div className="hero-scroll absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[30px] h-[60px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div

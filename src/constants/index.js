@@ -19,6 +19,11 @@ import {
   asal,
   trafficlight,
   kia,
+  appStore,
+  playStore,
+  asalCertificate,
+  birzeitBachelorCertificate,
+  efsetEnglishCertificate,
 } from "../assets";
 
 export const navLinks = [
@@ -33,6 +38,10 @@ export const navLinks = [
   {
     id: "skills",
     title: "Skills",
+  },
+  {
+    id: "certificates",
+    title: "Certificates",
   },
   {
     id: "Projects",
@@ -56,6 +65,13 @@ const services = [
   {
     title: "Backend Developer",
     icon: backend,
+  },
+  {
+    title: "Mobile Development",
+    icons: [
+      { name: "App Store", src: appStore },
+      { name: "Play Store", src: playStore },
+    ],
   },
 ];
 
@@ -128,24 +144,17 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "3DPortfolio",
-    icon: reactjs,
-    iconBg: "#383E56",
-    date: "august 2025",
-    points: [
-      "Developing and maintaining 3D web Portfolio using React.js and other related technologies.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "creating Email templates and integrating them with the portfolio for auto-reply and notifications.",
-    ],
-  },
-
-  {
     title: "Springboot Backend Developer",
     company_name: "Asal Technologies",
     icon: asal,
     iconBg: "#383E56",
     date: "January 2025",
+    techStack: [
+      { name: "Git", icon: git },
+      { name: "Java", icon: java },
+      { name: "Spring Boot", icon: springboot },
+      { name: "MySQL", icon: mysql },
+    ],
     points: [
       "Developing and maintaining back-end web applications using spring-boot and other related technologies.",
       "Collaborating with cross-functional teams including manager, and other developers to create high-quality backend API's.",
@@ -153,18 +162,64 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback ",
     ],
   },
-  // {
-  //   title: "Web Developer",
-  //   company_name: "GuRePe",
-  //   icon: shopify,
-  //   iconBg: "#383E56",
-  //   date: "December 2022",
-  //   points: [
-  //     "Our wedding guest website stands as a testament to personalized celebration and seamless event planning. Crafted with care and attention to detail, this website offers a unique digital experience for our guests, ensuring they feel warmly welcomed and well-informed about the upcoming festivities.",
-  //     "As the developer and designer behind this project, I aimed to create a platform that not only showcases our love story but also facilitates seamless communication, RSVP management, and sharing of important event details.",
-  //     "It's more than just a website; it's a digital extension of our joy and excitement, bringing our loved ones closer together as we embark on this beautiful journey.",
-  //   ],
-  // },
+  {
+    title: "React.js Developer",
+    company_name: "3DPortfolio",
+    icon: reactjs,
+    iconBg: "#383E56",
+    date: "May 2025",
+    techStack: [
+      { name: "React", icon: reactjs },
+      { name: "HTML", icon: html },
+      { name: "CSS", icon: css },
+      { name: "JavaScript", icon: javascript },
+      { name: "Node.js", icon: nodejs },
+    ],
+    points: [
+      "Developing and maintaining 3D web Portfolio using React.js and other related technologies.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "creating Email templates and integrating them with the portfolio for auto-reply and notifications.",
+    ],
+  },
+  {
+    title: "Mobile App Developer",
+    company_name: "RIG-Ramallah Investment Group",
+    icon: flutter,
+    iconBg: "#383E56",
+    date: "July 2025",
+    techStack: [
+      { name: "Flutter", icon: flutter },
+      { name: "Firebase", icon: firebase },
+    ],
+    points: [
+      "Developing and maintaining mobile applications using flutter and other related technologies.",
+      "Collaborating with cross-functional teams including managers, and other developers to create high-quality mobile applications.",
+      "Implementing features and testing them using Postman and other technologies.",
+      "Participating in code reviews and providing constructive feedback ",
+      "Deploying the application to the app store and play store.",
+    ],
+  },
+];
+
+const certificates = [
+  {
+    title: "Certificate of Training on Backend Development",
+    issuer: "Asal Technologies",
+    file: asalCertificate,
+    type: "image",
+  },
+  {
+    title: "Bachelor University Certificate",
+    issuer: "Birzeit University",
+    file: birzeitBachelorCertificate,
+    type: "image",
+  },
+  {
+    title: "EF SET English Certificate",
+    issuer: "EF SET",
+    file: efsetEnglishCertificate,
+    type: "pdf",
+  },
 ];
 
 // const testimonials = [
@@ -290,4 +345,4 @@ const projects = [
 ];
 
 // export { services, technologies, experiences, testimonials, projects };
-export { services, technologies, experiences, projects };
+export { services, technologies, experiences, certificates, projects };
