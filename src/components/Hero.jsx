@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import OdyImage from "../assets/OdyShbayeh.jpg";
+import OdyImage from "../assets/OdyShbayeh.jpeg";
 import { CiLinkedin } from "react-icons/ci";
 import { BsGithub } from "react-icons/bs";
 
