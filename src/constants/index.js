@@ -24,6 +24,23 @@ import {
   asalCertificate,
   birzeitBachelorCertificate,
   efsetEnglishCertificate,
+  RIGTradeINSplash,
+  RIGTradeINRequests,
+  RIGTradeINArchive,
+  RIGTradeINRequestSample,
+  RIGTradeINStock,
+  RIGAuto,
+  RIGAutoCen,
+  RIGAutoBrands,
+  RIGAutoCharging,
+  RIGAutomap,
+  RIGAutomore,
+  RIGAutoprofile,
+  RIGAutorequests,
+  RIGAutosettings,
+  RIGAutosplash,
+  RIGAutovehinfo,
+  RIGAutoAllVeh,
 } from "../assets";
 
 export const navLinks = [
@@ -272,7 +289,7 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: kia,
+    images: [kia],
     source_code_Link: "https://github.com/odyshbayeh/Kia_motors_project",
   },
   {
@@ -313,7 +330,7 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: trafficlight,
+    images: [trafficlight],
     source_code_Link:
       "https://github.com/odyshbayeh/TrafficManagementRedLightViolationDetection",
   },
@@ -339,8 +356,92 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: Sarfes,
+    images: [Sarfes],
     source_code_Link: "https://github.com/PierreBB2002/Sarfes-Project",
+  },
+  {
+    name: "RIG-TradeIN",
+    description:
+      "RIG-TradeIN is a comprehensive Internal mobile application Developed To manage the TradeIN-Archive-Stock Requests in RIG-Ramallah Investment Group, It offers a user-friendly interface for employees to manage the TradeIN-Archive-Stock Requests efficiently. then it provides a seamless experience for Employees to enhance their productivity and efficiency.",
+    tags: [
+      // {
+      //   name: "Flutter",
+      //   color: "blue-text-gradient",
+      // },
+      // {
+      //   name: "Firebase",
+      //   color: "green-text-gradient",
+      // },
+      {
+        name: "Android",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "IOS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Internal App",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Restricted Access",
+        color: "pink-text-gradient",
+      },
+    ],
+    images: [
+      RIGTradeINSplash,
+      RIGTradeINRequests,
+      RIGTradeINArchive,
+      RIGTradeINRequestSample,
+      RIGTradeINStock,
+    ],
+    source_code_Link: "https://github.com/odyshbayeh",
+  },
+  {
+    name: "RIG-Automotive",
+    description:
+      "RIG-Automotive is a Under Development Mobile Application Developed To manage the Automotive Services in RIG-Ramallah Investment Group, It offers a user-friendly interface for users to manage the Automotive Services efficiently. then it provides a seamless experience for Users to monitor their vehicles and services under the supported brands.",
+    tags: [
+      // {
+      //   name: "Flutter",
+      //   color: "blue-text-gradient",
+      // },
+      // {
+      //   name: "Firebase",
+      //   color: "green-text-gradient",
+      // },
+      {
+        name: "Android",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "IOS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Automotive App",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Under Development",
+        color: "pink-text-gradient",
+      },
+    ],
+    images: [
+      RIGAutosplash,
+      RIGAutoCen,
+      RIGAutoBrands,
+      RIGAutoCharging,
+      RIGAutomap,
+      RIGAutomore,
+      RIGAutoprofile,
+      RIGAutorequests,
+      RIGAutosettings,
+      RIGAuto,
+      RIGAutovehinfo,
+    ],
+    source_code_Link: "https://github.com/odyshbayeh",
   },
 ];
 

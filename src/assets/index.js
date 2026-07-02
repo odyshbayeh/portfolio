@@ -8,6 +8,23 @@ import close from "./close.svg";
 import kia from "./kia.jpg";
 import trafficlight from "./trafficlight.png";
 import Sarfes from "./sarfes.png";
+import RIGTradeINSplash from "./RIG/RIG-TradeIN/rig-tradeinlogo.png";
+import RIGTradeINRequests from "./RIG/RIG-TradeIN/rig-tradeinrequests.png";
+import RIGTradeINArchive from "./RIG/RIG-TradeIN/rig-tradeinarchive.png";
+import RIGTradeINRequestSample from "./RIG/RIG-TradeIN/rig-tradeinsamplerequest.png";
+import RIGTradeINStock from "./RIG/RIG-TradeIN/rig-tradeinstock.png";
+import RIGAuto from "./RIG/RIG-Automotive/RIG-allveh.png";
+import RIGAutoCen from "./RIG/RIG-Automotive/RIG-centers.png";
+import RIGAutoBrands from "./RIG/RIG-Automotive/RIG-Brands.png";
+import RIGAutoCharging from "./RIG/RIG-Automotive/RIG-charging.png";
+import RIGAutomap from "./RIG/RIG-Automotive/RIG-map.png";
+import RIGAutomore from "./RIG/RIG-Automotive/RIG-more.png";
+import RIGAutoprofile from "./RIG/RIG-Automotive/RIG-profile.png";
+import RIGAutorequests from "./RIG/RIG-Automotive/RIG-requests.png";
+import RIGAutosettings from "./RIG/RIG-Automotive/RIG-Settings.png";
+import RIGAutosplash from "./RIG/RIG-Automotive/RIG-Splash.png";
+import RIGAutovehinfo from "./RIG/RIG-Automotive/RIG-Vehinfo.png";
+import RIGAutoAllVeh from "./RIG/RIG-Automotive/RIG-allveh.png";
 import herobg from "./herobg.png";
 import appStore from "./app-store.png";
 import playStore from "./play-store.png";
@@ -41,6 +58,23 @@ export {
   birzeitBachelorCertificate,
   efsetEnglishCertificate,
   Sarfes,
+  RIGTradeINSplash,
+  RIGTradeINRequests,
+  RIGTradeINArchive,
+  RIGTradeINRequestSample,
+  RIGTradeINStock,
+  RIGAuto,
+  RIGAutoCen,
+  RIGAutoBrands,
+  RIGAutoCharging,
+  RIGAutomap,
+  RIGAutomore,
+  RIGAutoprofile,
+  RIGAutorequests,
+  RIGAutosettings,
+  RIGAutosplash,
+  RIGAutovehinfo,
+  RIGAutoAllVeh,
   trafficlight,
   kia,
   asal,
