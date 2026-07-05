@@ -84,7 +84,7 @@ const ProjectImage = ({ images, name, onOpen }) => {
         />
       </AnimatePresence>
 
-      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 pointer-events-none">
+      <div className="absolute inset-0 flex items-start justify-start m-1 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 pointer-events-none">
         <div className="black-gradient w-10 h-10 rounded-full flex justify-center items-center">
           <FiMaximize2 className="text-white text-[18px]" />
         </div>

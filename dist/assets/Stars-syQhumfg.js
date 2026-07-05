@@ -1,4 +1,4 @@
-import{n as w,r as e,K as z,aC as f,M as C,c as P,j as c,aD as U}from"./index-jUiAX6jj.js";import{_ as p,c as x,C as j}from"./react-three-fiber.esm-UaouQRmb.js";import{m as _}from"./react-merge-refs.esm-hAbx5P3g.js";const F=()=>parseInt(w.replace(/\D+/g,"")),R=F(),y=R>=154?"opaque_fragment":"output_fragment";class I extends z{constructor(r){super(r),this.onBeforeCompile=(t,n)=>{const{isWebGL2:a}=n.capabilities;t.fragmentShader=t.fragmentShader.replace(`#include <${y}>`,`
+import{n as w,r as e,K as z,aC as f,M as C,c as P,j as c,aD as U}from"./index-JQ15LH1g.js";import{_ as p,c as x,C as j}from"./react-three-fiber.esm-ECwSYuFg.js";import{m as _}from"./react-merge-refs.esm-hAbx5P3g.js";const F=()=>parseInt(w.replace(/\D+/g,"")),R=F(),y=R>=154?"opaque_fragment":"output_fragment";class I extends z{constructor(r){super(r),this.onBeforeCompile=(t,n)=>{const{isWebGL2:a}=n.capabilities;t.fragmentShader=t.fragmentShader.replace(`#include <${y}>`,`
         ${a?`#include <${y}>`:`#extension GL_OES_standard_derivatives : enable
 #include <${y}>`}
       vec2 cxy = 2.0 * gl_PointCoord - 1.0;
