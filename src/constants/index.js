@@ -22,8 +22,14 @@ import {
   appStore,
   playStore,
   asalCertificate,
+  asalInternshipCertificate,
   birzeitBachelorCertificate,
   efsetEnglishCertificate,
+  claude101Certificate,
+  claudeCode101Certificate,
+  claudePlatform101Certificate,
+  googlePlayAcademyIgniteCertificate,
+  googlePlayAcademyCertificate,
   RIGTradeINSplash,
   RIGTradeINRequests,
   RIGTradeINArchive,
@@ -41,6 +47,20 @@ import {
   RIGAutosplash,
   RIGAutovehinfo,
   RIGAutoAllVeh,
+  PALEVNavigation,
+  PALEVStationProfile,
+  PALEVActiveSession,
+  PALEVActiveSessions,
+  PALEVSessions,
+  PALEVFavLocations,
+  PALEVSubscriptions,
+  PALEVMyAccount,
+  PALEVNotifications,
+  PALEVSettings,
+  PALEVMore,
+  PALEVBiometry,
+  PALEVSatellite,
+  PALEVComingSoon,
 } from "../assets";
 
 export const navLinks = [
@@ -220,22 +240,79 @@ const experiences = [
 
 const certificates = [
   {
-    title: "Certificate of Training on Backend Development",
-    issuer: "Asal Technologies",
-    file: asalCertificate,
-    type: "image",
+    id: "asal",
+    issuer: "ASAL Technologies",
+    documents: [
+      {
+        title: "Certificate of Training on Backend Development",
+        file: asalCertificate,
+        type: "image",
+      },
+      {
+        title: "Certificate of Internship & Practical Training",
+        file: asalInternshipCertificate,
+        type: "image",
+      },
+    ],
   },
   {
-    title: "Bachelor University Certificate",
+    id: "birzeit",
     issuer: "Birzeit University",
-    file: birzeitBachelorCertificate,
-    type: "image",
+    documents: [
+      {
+        title: "Bachelor University Certificate",
+        file: birzeitBachelorCertificate,
+        type: "image",
+      },
+    ],
   },
   {
-    title: "EF SET English Certificate",
+    id: "efset",
     issuer: "EF SET",
-    file: efsetEnglishCertificate,
-    type: "pdf",
+    documents: [
+      {
+        title: "EF SET English Certificate",
+        file: efsetEnglishCertificate,
+        type: "pdf",
+      },
+    ],
+  },
+  {
+    id: "claude",
+    issuer: "Anthropic",
+    documents: [
+      {
+        title: "Claude 101",
+        file: claude101Certificate,
+        type: "pdf",
+      },
+      {
+        title: "Claude Code 101",
+        file: claudeCode101Certificate,
+        type: "pdf",
+      },
+      {
+        title: "Claude Platform 101",
+        file: claudePlatform101Certificate,
+        type: "pdf",
+      },
+    ],
+  },
+  {
+    id: "play-store",
+    issuer: "Google Play Academy",
+    documents: [
+      {
+        title: "Google Play Academy Ignite",
+        file: googlePlayAcademyIgniteCertificate,
+        type: "pdf",
+      },
+      {
+        title: "Google Play Academy Certificate",
+        file: googlePlayAcademyCertificate,
+        type: "pdf",
+      },
+    ],
   },
 ];
 
@@ -442,6 +519,50 @@ const projects = [
       RIGAutovehinfo,
     ],
     source_code_Link: "https://github.com/odyshbayeh",
+  },
+  {
+    name: "PALEV",
+    description:
+      "PALEV is a live EV charging mobile application that lets customers across Palestine find charging stations, navigate to them, and start charging sessions from their phone. Users can scan a station QR code, track active sessions, review charge history, save favorite locations, manage subscriptions and payments, and handle account settings—including biometric sign-in—so electric vehicle charging is simple and accessible nationwide.",
+    tags: [
+      {
+        name: "Android",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "IOS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "EV Charging",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Maps",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Live App",
+        color: "pink-text-gradient",
+      },
+    ],
+    images: [
+      PALEVNavigation,
+      PALEVStationProfile,
+      PALEVActiveSession,
+      PALEVActiveSessions,
+      PALEVSessions,
+      PALEVFavLocations,
+      PALEVSubscriptions,
+      PALEVMyAccount,
+      PALEVNotifications,
+      PALEVSettings,
+      PALEVMore,
+      PALEVBiometry,
+      PALEVSatellite,
+      PALEVComingSoon,
+    ],
+    app_link: "https://palev.ps/app/qr.html",
   },
 ];
 

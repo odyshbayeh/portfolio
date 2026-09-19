@@ -25,12 +25,32 @@ import RIGAutosettings from "./RIG/RIG-Automotive/RIG-Settings.png";
 import RIGAutosplash from "./RIG/RIG-Automotive/RIG-Splash.png";
 import RIGAutovehinfo from "./RIG/RIG-Automotive/RIG-Vehinfo.png";
 import RIGAutoAllVeh from "./RIG/RIG-Automotive/RIG-allveh.png";
+import PALEVNavigation from "./RIG/PALEV/navigation.png";
+import PALEVStationProfile from "./RIG/PALEV/stationprofile.png";
+import PALEVActiveSession from "./RIG/PALEV/activesession.png";
+import PALEVActiveSessions from "./RIG/PALEV/activesessions.png";
+import PALEVSessions from "./RIG/PALEV/sessions.png";
+import PALEVFavLocations from "./RIG/PALEV/favlocations.png";
+import PALEVSubscriptions from "./RIG/PALEV/subscriptions.png";
+import PALEVMyAccount from "./RIG/PALEV/myaccount.png";
+import PALEVNotifications from "./RIG/PALEV/notifications.png";
+import PALEVSettings from "./RIG/PALEV/settings.png";
+import PALEVMore from "./RIG/PALEV/more.png";
+import PALEVBiometry from "./RIG/PALEV/biometryenable.png";
+import PALEVSatellite from "./RIG/PALEV/satallite.png";
+import PALEVComingSoon from "./RIG/PALEV/commingsoon.png";
 import herobg from "./herobg.png";
 import appStore from "./app-store.png";
 import playStore from "./play-store.png";
-import asalCertificate from "./certificates/AsalCertificate.png";
-import birzeitBachelorCertificate from "./certificates/BirzetBech.png";
-import efsetEnglishCertificate from "./certificates/EF-SET-Certificate.pdf";
+import asalCertificate from "./certificates/ASAL/AsalCertificate.png";
+import asalInternshipCertificate from "./certificates/ASAL/AsalConserns.png";
+import birzeitBachelorCertificate from "./certificates/Birzeit/BirzetBech.png";
+import efsetEnglishCertificate from "./certificates/EFSET/EF-SET-Certificate.pdf";
+import claude101Certificate from "./certificates/Claude/certificate-zqs3jregucz2-1784134792.pdf";
+import claudeCode101Certificate from "./certificates/Claude/certificate-gj7ew5qgrxbc-1784137265.pdf";
+import claudePlatform101Certificate from "./certificates/Claude/certificate-i292arkpe2zh-1784142078.pdf";
+import googlePlayAcademyIgniteCertificate from "./certificates/Play Store/Congratulations on completing Google Play Academy Ignite _ Google Play Academy.pdf";
+import googlePlayAcademyCertificate from "./certificates/Play Store/piy16cpy_1789655383942.pdf";
 
 import css from "./tech/css.png";
 import git from "./tech/git.png";
@@ -55,8 +75,14 @@ export {
   appStore,
   playStore,
   asalCertificate,
+  asalInternshipCertificate,
   birzeitBachelorCertificate,
   efsetEnglishCertificate,
+  claude101Certificate,
+  claudeCode101Certificate,
+  claudePlatform101Certificate,
+  googlePlayAcademyIgniteCertificate,
+  googlePlayAcademyCertificate,
   Sarfes,
   RIGTradeINSplash,
   RIGTradeINRequests,
@@ -75,6 +101,20 @@ export {
   RIGAutosplash,
   RIGAutovehinfo,
   RIGAutoAllVeh,
+  PALEVNavigation,
+  PALEVStationProfile,
+  PALEVActiveSession,
+  PALEVActiveSessions,
+  PALEVSessions,
+  PALEVFavLocations,
+  PALEVSubscriptions,
+  PALEVMyAccount,
+  PALEVNotifications,
+  PALEVSettings,
+  PALEVMore,
+  PALEVBiometry,
+  PALEVSatellite,
+  PALEVComingSoon,
   trafficlight,
   kia,
   asal,

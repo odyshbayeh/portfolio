@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Tilt } from "react-tilt";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiChevronLeft, FiChevronRight, FiMaximize2 } from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight, FiDownload, FiMaximize2 } from "react-icons/fi";
 
 import { styles } from "../styles";
 import { github } from "../assets";
@@ -254,6 +254,7 @@ const ProjectCard = ({
   tags,
   images,
   source_code_Link,
+  app_link,
   onOpenViewer,
 }) => {
   return (
@@ -273,20 +274,37 @@ const ProjectCard = ({
             onOpen={(startIndex) => onOpenViewer({ name, images, startIndex })}
           />
 
-          <div className="absolute inset-0 flex justify-end m-1 card-img_hover pointer-events-none">
-            <div
-              onClick={(event) => {
-                event.stopPropagation();
-                window.open(source_code_Link, "_blank");
-              }}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer pointer-events-auto"
-            >
-              <img
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
+          <div className="absolute inset-0 flex justify-end m-1 card-img_hover pointer-events-none gap-1">
+            {app_link && (
+              <a
+                href={app_link}
+                target="_blank"
+                rel="noreferrer"
+                onClick={(event) => event.stopPropagation()}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer pointer-events-auto"
+                title="Install app"
+                aria-label={`Install ${name}`}
+              >
+                <FiDownload className="text-white text-[18px]" />
+              </a>
+            )}
+            {source_code_Link && (
+              <div
+                onClick={(event) => {
+                  event.stopPropagation();
+                  window.open(source_code_Link, "_blank");
+                }}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer pointer-events-auto"
+                title="Source code"
+                aria-label={`${name} source code`}
+              >
+                <img
+                  src={github}
+                  alt="github"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            )}
           </div>
         </div>
 
